@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <center>
+        <div class="border w-25 m-3">
+            <form action="#" class="bg-warning ">
+                <h1>Age Checker</h1><br>
+                <input id="age" type="text"><br><br>
+                <button onclick="agechecker()" class="btn btn-primary m-5">Check</button><br>
+            
+        </div>
+        <div id="result">
+
+        </div>
+    </form>
+    </center>
+        <script>
+            function agechecker()
+            {
+                let checkage=document.getElementById("age").value
+                console.log(checkage);
+                
+            if(checkage>=18)
+            {
+                data=`<p class="text-success fw-bolder">User eligible for vote</p>`
+                
+            }
+            else
+            {
+                data=`<p class="text-danger fw-bolder">User is not eligible for vote</p>`
+                
+            }
+             document.getElementById("result").innerHTML=data
+            }
+    
+    
+        </script>
+</body>
+</html>
